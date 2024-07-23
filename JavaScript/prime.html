@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Program</title>
+        <script>
+        function Primenumber(){
+            let num=document.getElementById("n1").value;
+            
+            let count ="0";
+            for(let i=1;i<=num;i++){
+                if(num%i==0){
+                    count++;
+             }
+                }
+                if(count == 2){
+                document.write ("prime number");
+                }
+                else{
+                    document.write("Not a prime Number");
+                }
+        }
+        </script>
+    </head>
+    <body>
+        Enter the Number <input type="text" value="Enter the number " id="n1" onfocus="this.value=' '"/>
+        <br><br>
+        <button onclick="Primenumber()">verify</button>
+        <div id="output"></div>
+    </body>
+    
+</html>

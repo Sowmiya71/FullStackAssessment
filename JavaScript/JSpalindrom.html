@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <body>
+    
+
+
+    Enter the text<input type="text" value="number kudu da " id="n1" onfocus="this.value=''" />
+    <br><br>
+        <button onclick="palindrome()">verify</button>
+        <div id="output">
+
+        </div>
+        <script>
+            function palindrome(){
+            let n=document.getElementById("n1").value;
+            let reverse="";
+            let cide="";
+            for(let i=n.length-1;i>=0;i--){
+                    reverse=reverse+n[i];
+            }
+               if(n === reverse){
+                cide="Palindrome";
+               }
+             else{
+                cide= "not a  palindrome";
+             } 
+             document.getElementById("output").innerHTML=cide; 
+            }
+        
+        </script>
+</body>
+</html>
