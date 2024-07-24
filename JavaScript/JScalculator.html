@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            .body{
+                border: 2px solid black;
+                width:max-content;
+                margin-left: 420px;
+                margin-top: 50px;
+                background-color:rgb(58, 54, 51);
+                border-radius: 10px;
+                box-shadow:0 20px 15px rgb(103, 94, 94);
+            }
+            .row{
+                height: 100px;
+                width: 400px;
+                display: flex;
+            }
+            .box{
+                border: 1px solid black;
+                height: 70px;
+                width: 100px;
+                font-size: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(154, 154, 154);
+                margin: 7px;
+                border-radius: 10px;
+                border-bottom:2px solid rgb(20, 17, 17);
+                cursor: pointer;
+                box-shadow:0 20px 20px rgb(34, 34, 34);
+            }
+            .top{
+                border: 1px solid black;
+                height: 70px;
+                width: 100px;
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:rgb(8, 134, 95);
+                color: white;
+                margin: 9px;
+                border-radius: 10px;
+                border-bottom:2px solid rgb(21, 20, 20);
+                box-shadow:0 10px 20px rgb(37, 37, 37);
+                cursor: pointer;
+            }
+            .top:hover{
+                background-color: rgb(86, 215, 50);
+                color: black;
+                border: 3px solid black;
+            }
+            .box:hover{
+                border: 5px solid rgb(13, 12, 12);
+                height: 80px;
+                width: 90px;
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:rgb(185, 198, 48);
+                margin: 8px;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+            .display{
+                height: 80px;
+                width: 380px;
+                border: 3px solid rgb(16, 14, 14);
+                border-bottom: none;
+                border-right: none;
+                margin-top: 10px;
+                margin-left: 8px;
+                border-radius: 15px;
+                background-color: rgb(211, 206, 206);
+            }
+            input::content{
+                font-size: 250px;
+            }
+            .full{
+                background-color:rgb(81, 76, 76);
+            }
+        </style>
+    </head>
+    <body class="full">
+        <div class="body">
+            <div class="row">
+                <input type="text" class="display" id="n1"></input>
+            </div>
+            <div class="row">
+                <button class="top" onclick="clear()">C</button>
+                <button class="top" onclick="input('%')">%</button>
+                <button class="top" onclick="Allclear()">AC</button>
+                <button class="top" onclick="input('/')">/</button>
+            </div>
+            <div class="row">
+                <button class="box" onclick="input('7')">7</button>
+                <button class="box" onclick="input('8')">8</button>
+                <button class="box" onclick="input('9')">9</button>
+                <button class="top" onclick="input('*')">*</button>
+            </div>
+            <div class="row">
+                <button class="box" onclick="input('4')">4</button>
+                <button class="box" onclick="input('5')">5</button>
+                <button class="box" onclick="input('6')">6</button>
+                <button class="top" onclick="input('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="box" onclick="input('1')">1</button>
+                <button class="box" onclick="input('2')">2</button>
+                <button class="box" onclick="input('3')">3</button>
+                <button class="top" onclick="input('4')">+</button>
+            </div>
+            <div class="row">
+                <button class="box" onclick="input('00')">00</button>
+                <button class="box" onclick="input('0')">0</button>
+                <button class="box" onclick="input('.')">.</button>
+                <button class="top" onclick="equal()">=</button>
+            </div>
+        </div>
+        <script>
+            function Allclear(){
+              document.getElementById("n1").value='';
+            }
+            function input(ip){
+                document.getElementById("n1").value+=ip;
+            }
+            function clear(){
+                let n1 = document.getElementById("n1");
+                n1.value=n1.value.slice(0,-1);
+            }
+            function equal(){
+                let n1 = document.getElementById("n1");
+                let exp = n1.value;
+                n1.value= eval(exp);
+            }
+        </script>
+    </body>
+</html>
