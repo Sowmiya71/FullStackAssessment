@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            .body{
+                border: 2px solid black;
+                width:max-content;
+                margin-left: 420px;
+                margin-top: 50px;
+                background-color:rgb(124, 98, 79);
+                border-radius: 10px;
+                box-shadow:0 20px 15px rgb(103, 94, 94);
+            }
+            .row{
+                height: 100px;
+                width: 400px;
+                display: flex;
+            }
+            .box{
+                border: 1px solid black;
+                height: 70px;
+                width: 100px;
+                font-size: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(131, 199, 220);
+                margin: 7px;
+                border-radius: 20px;
+                border-bottom:2px solid rgb(20, 17, 17);
+                cursor: pointer;
+                box-shadow:0 20px 20px black;
+            }
+            .top{
+                border: 1px solid black;
+                height: 70px;
+                width: 100px;
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:rgb(130, 31, 183);
+                color: white;
+                margin: 9px;
+                border-radius: 20px;
+                border-bottom:2px solid rgb(21, 20, 20);
+                box-shadow:0 10px 20px black;
+                cursor: pointer;
+            }
+            .top:hover{
+                background-color: rgb(86, 215, 50);
+                color: black;
+                border: 3px solid black;
+            }
+            .box:hover{
+                border: 5px solid rgb(13, 12, 12);
+                height: 80px;
+                width: 90px;
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:rgb(185, 198, 48);
+                margin: 8px;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+            .display{
+                height: 80px;
+                width: 380px;
+                border: 3px solid rgb(16, 14, 14);
+                border-bottom: none;
+                border-right: none;
+                margin-top: 10px;
+                margin-left: 8px;
+                border-radius: 15px;
+                background-color: rgb(181, 141, 141);
+            }
+            input::content{
+                font-size: 250px;
+            }
+            .full{
+                background-color:rgb(81, 76, 76);
+            }
+        </style>
+    </head>
+    <body class="full">
+        <div class="body">
+            <div class="row">
+                <input type="text" class="display"></input>
+            </div>
+            <div class="row">
+                <button class="top">C</button>
+                <button class="top">%</button>
+                <button class="top"><=</button>
+                <button class="top">/</button>
+            </div>
+            <div class="row">
+                <button class="box">7</button>
+                <button class="box">8</button>
+                <button class="box">9</button>
+                <button class="top">*</button>
+            </div>
+            <div class="row">
+                <button class="box">4</button>
+                <button class="box">5</button>
+                <button class="box">6</button>
+                <button class="top">-</button>
+            </div>
+            <div class="row">
+                <button class="box">1</button>
+                <button class="box">2</button>
+                <button class="box">3</button>
+                <button class="top">+</button>
+            </div>
+            <div class="row">
+                <button class="box">00</button>
+                <button class="box">0</button>
+                <button class="box">.</button>
+                <button class="top">=</button>
+            </div>
+        </div>
+    </body>
+</html>
